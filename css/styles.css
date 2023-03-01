@@ -78,8 +78,7 @@ body {
 /* Wrapper */
 
 .container {
-    min-width: 428px;
-    max-width: 480px;
+    max-width: 428px;
     padding: 0 16px;
     margin: 0 auto;
 
@@ -101,13 +100,21 @@ body {
     }
 }
 
-/* Section Padding */
+/*===== Section Padding =====*/
 
-.our-features-section,
+@media screen and (min-width: 1200px) {
+    .our-features-section,
+    .we-doing-section,
+    .our-team {
+        padding: 120px 0;
+    }
+}
+
+/* .our-features-section,
 .we-doing-section,
 .our-team {
     padding: 120px 0;
-}
+} */
 
 /* Button */
 
@@ -194,7 +201,15 @@ body {
     height: auto;
 }
 
-/* Header */
+/*====================== Header =====================*/
+
+/* Mobole menu button */
+
+.header-menu-icon {
+    fill: var(--dark-bg-cl);
+}
+
+/* ================== */
 
 .header {
     border-bottom: 1px solid;
@@ -326,7 +341,7 @@ body {
     color: var(--primary-cl);    
 }
 
-/* Hero section */
+/*========================== Hero section ========================*/
 
 .hero-section {
     max-width: 1440px;
@@ -339,33 +354,68 @@ body {
 }
 
 .hero-title {
-    font-size: 56px;
-    line-height: calc(60 / 56);
+    font-size: 36px;
+    line-height: calc(40 / 36);
     letter-spacing: 0.02em;
     text-align: center;
 
     color: var(--white-cl);
+    
+    max-width: 318px;
+    margin: 0 auto 72px;
+}
 
-    margin-bottom: 48px;
-    max-width: 494px;
-    margin: 0 auto 48px;
+@media screen and (min-width: 768px) {
+    .hero-title {
+        font-size: 56px;
+        line-height: calc(60 / 56);
+        margin-bottom: 40px;
+        max-width: 494px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-title {
+        margin-bottom: 48px;
+
+    }
 }
 
 .hero-container {
-    padding: 188px 0;
+    padding: 112px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .hero-container {
+        padding-bottom: 108px;
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-container {
+        padding: 188px 0;
+
+    }
 }
 
 /*=================== Our features section =====================*/
 
+.our-features-section {
+    padding: 96px 0;
+}
+
 .our-features-list {
-    list-style: none;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 72px;
+    column-gap: 24px;
 }
 
 @media screen and (min-width: 768px) {
-    .we-doing-section {
-        display: block;
+    .our-features-list {
+       flex-direction: row;
+       flex-wrap: wrap;
     }
 }
 
@@ -379,9 +429,17 @@ body {
     }
 }
 
-.our-features-item {
-    flex-basis: calc((100% - (var(--item) - 1) * var(--indent)) / var(--item));
-    margin-right: var(--indent);
+@media screen and (min-width: 768px) {
+    .our-features-item {
+        --item: 2;
+        flex-basis: calc((100% - (var(--item) - 1) * var(--indent)) / var(--item));
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .our-features-item {
+        --item: 4;
+    }
 }
 
 .our-features-item:last-child {
@@ -406,8 +464,36 @@ body {
     }
 }
 
+.our-features-item .sub-title {
+    font-size: 36px;
+    line-height: calc(40 / 36);
+    font-weight: 700;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .our-features-item .sub-title {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .our-features-item .sub-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: calc(24 / 20);
+    }
+}
+
 .our-features-item p {
     line-height: calc(24 / 16);
+    font-weight: 500;
+}
+
+@media screen and (min-width: 1200px) {
+    .our-features-item p {
+        font-weight: normal;
+    }
 }
 
 /*====================== What are we doing ====================*/
@@ -722,9 +808,7 @@ body {
 
 /* ====================== table 768px ======================== */
 
-@media screen and (min-width: 768px) {
-    
-}
+
 
 
 
