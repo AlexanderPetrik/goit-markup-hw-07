@@ -205,8 +205,26 @@ body {
 
 /* Mobole menu button */
 
+.header-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* width: 32px;
+    height: 22px; */
+
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .header-menu-btn {
+        display: none;
+    }
+}
+
 .header-menu-icon {
-    fill: var(--dark-bg-cl);
 }
 
 /* ================== */
@@ -215,6 +233,10 @@ body {
     border-bottom: 1px solid;
     border-color: var(--accent-cl);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header .logo {
+    padding: 24px 0;
 }
 
 .header-wrapper {
@@ -246,7 +268,6 @@ body {
     text-transform: uppercase;
     color: var(--primary-cl);
 
-    /* margin-right: 76px; */
     display: block;
 }
 
@@ -261,7 +282,13 @@ body {
 /* Nav */
 
 .top-nav {
-    display: flex;
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .top-nav {
+        display: flex;
+    }
 }
 
 .top-nav-item {
@@ -306,10 +333,16 @@ body {
 }
 
 .contacts {
-    display: flex;
-    list-style: none;
+    display: none;
+    /* display: flex; */
     line-height: calc(24 / 16);
     align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .contacts {
+        display: flex;
+    }
 }
 
 .contacts-item a {
